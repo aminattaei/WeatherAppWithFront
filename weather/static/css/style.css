@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-image: url("../images/cloudy.jpg");
+}
+.row{
+   display: flex;
+   justify-content: space-between;
+   
+}
+.info{
+    color: #ffffff;
+    margin-top: 300px;
+    display: flex;
+   
+}
+.temperature{
+    font-size: 150px;
+    margin-right:40px;
+    margin-left: 100px;
+}
+.place{
+    margin-top: 100px;
+    margin-right: 40px;
+}
+.city{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+.country{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.date{
+    font-size: 20px;
+    text-align: center;
+}
+.status{
+   margin-top: 112px;
+   margin-left: 30px;
+}
+.status i{
+    font-size: 50px;
+}
+.status p{
+    font-size: 20px;
+
+}
+.parent{
+   backdrop-filter: blur(30px);
+   height: 80%;
+   width: 350px;
+   margin-right: 0;
+   direction: ltr;
+ position: relative;
+ overflow-y:scroll;
+}
+.parent::-webkit-scrollbar{
+    width: 1vw;
+}
+.parent::-webkit-scrollbar-thumb{
+    background-color:#999 ;
+    border-radius: 10px;
+    }
+.parent input{
+    width: 60%;
+    color: #fff;
+     margin-top: 30px;
+     margin-left: 80px;
+    padding: 10px;
+    height: 50px;
+    font-size: 20px;
+    background-color:inherit;
+    border: none;
+    border-bottom: 2px solid;
+    
+    
+}
+.parent input:focus{
+    outline: none;
+}
+.parent input::placeholder{
+color: #fff;
+}
+.parent button{
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    position: absolute;
+   top: 0px;
+   right: 0px;
+   color: #232323;
+    background-color: rgb(255, 119, 0);
+     font-size: 30px;
+     cursor: pointer;
+     
+}
+.parent p{
+    margin: 30px 80px;
+    font-size: 20px;
+}
+.parent h4{
+    font-size: 25px;
+    margin:30px 80px;
+    color: white;
+    
+}
+.chiled-city{
+    color: #fff;
+}
+.chiled-info{
+    color: white;
+}
+.right-wether{
+  display: flex;
+  justify-content: space-between;
+}
+.right-wether p{
+    margin-right: 50px ;
+}
+.Description{
+    display: flex;
+    justify-content: space-between;
+}
+.Description p{
+    margin-right: 50px ;
+}
+hr{
+    width: 80%;
+    margin: auto;
+}

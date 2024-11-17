@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body >
+    <div class="container">
+        <div class="row">
+            <div class="">
+               
+                <div class="info">
+                  <!-- temp -->
+               <p class="temperature">{{weather_data.current.temp_c}} °</p>
+               <div class="place">
+                <!-- country && city -->
+               <p class="city">{{weather_data.location.name}}</p>
+               <p class="country">{{weather_data.location.country}}</p>
+               <!-- Time Zone -->
+               <p class="date">{{weather_data.location.localtime}}</p>
+               </div>
+               <!-- whether -->
+               <div class="status">
+                <!-- whether {icone} -->
+                  <img src="{{weather_data.current.condition.icon}}">
+                 <!-- wether main -->
+                <p class="wether">{{weather_data.current.condition.text}}</p>
+               </div>
+              </div>
+            </div>
+
+        <div class="">
+            <div class="parent">
+
+              <form  method="post">
+                {% csrf_token %}
+                {{form}}
+                <button><i class="fas fa-search"></i></button>
+              </form>
+              
+              <div class="chiled-city">
+              {% comment %} <p>Manchester</p>
+              <p>New York</p>
+              <p>colifornia</p> {% endcomment %}
+            </div>
+              <hr>
+              
+              <h4>Weather Details</h4>
+              <div class="chiled-info">
+              <div class="right-wether Description">
+                <!-- whether Speed-->
+                <p>{{weather_data.current.condition.text}}</p>
+                <p>{{weather_data.current.temp_c}}</p>
+              </div>
+                 <div class="humidity Description">
+                  <p>Humidity</p>
+                  <p>{{weather_data.location.humidity}} %</p>
+                </div>  
+                <div class="wind Description">
+                  <!-- Wind -->
+                  <p>Width</p>
+                  <p>{{weather_data.location.wind_degree}}</p>
+                </div>
+
+              <hr>
+              <!-- coord -->
+              <div class="coord">
+                <h4>Coord</h4>
+              <div class="lat Description">
+                <p>lat</p>
+                <p>{{weather_data.location.lat}}</p>
+              </div>
+            
+            <div class="lon Description">
+              <p>lon</p>
+              <p>{{weather_data.location.lon}}</p>
+            </div>
+          </div>
+
+          <hr>
+           <!-- Temp Temp-min  Temp-max -->
+          <div class="Temp">
+            {% comment %} <h4>Temp</h4>
+              <div class="temp-min Description">
+                <p>Temp min</p>
+                <p>{{weather_data.temp_c}} °</p>
+              </div>
+              <div class="temp-max Description">
+                <p>Temp max</p>
+                <p>{{weather_data.temp_f}} °</p>
+            </div>  
+          </div> {% endcomment %}
+            </div>
+            </div>  
+        </div>
+
+        </div>
+        </div>
+         <input value="{{weather_data.current.condition.text}}" type="hidden" id="status">
+     <script src="static/js/app.js"></script>
+</body>
+</html>
